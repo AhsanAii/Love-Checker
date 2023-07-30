@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./style.css">
+    <title>Love Checker</title>
+</head>
+<body>
+    
+      
+
+      <div class="container">
+             <div class="calculater">
+                   <div class="first-head">
+                        <p>Love Checker</p>
+                   </div>
+                   <div class="adding">
+                       <input type="text" placeholder="Partner Name" id="namee">
+                        +
+                       <input type="text" placeholder=" partner Name" id="lname">
+                   </div>
+                   <div class="click">
+                     <button onclick="checklove()">click</button>
+                   </div>
+                   <div class="percentage">
+                     <button id="lovecheck"> Love percentage</button>
+                   </div>
+                   <div class="footing">
+                        <p>Allah Bless Your Relationship (Ameen)</p>
+                   </div>
+             </div>
+      </div>
+
+
+      <script>
+               
+               function checklove()
+                {
+                    var name=document.getElementById('namee').value;
+                    var lname=document.getElementById('lname').value;
+                    if (name=="")
+                     {
+                        alert("please Enter your name");
+                      
+                    }
+                     else if(name.length <=2)
+                    {
+                       alert("Your name minimum lenght has 3");
+                    }
+                    else if(!isNaN(name))
+                    {
+                        alert("only character are allowed");
+                    }
+                     else if (lname=="")
+                     {
+                        alert("please Enter your  partner name");
+                      
+                    }
+                     else if(lname.length <=2)
+                    {
+                       alert("Your name minimum lenght has 3");
+                    }
+                    else if(!isNaN(lname))
+                    {
+                        alert("only character are allowed");
+                    }
+                    else
+                    {
+                      var love=Math.random()*100;
+                  love=Math.floor(love);
+                  document.getElementById("lovecheck").innerHTML = "Your loveliness is "+love+"%";
+
+                    }
+
+
+                  
+                
+               }
+
+      </script>
+  
+</body>
+</html>
